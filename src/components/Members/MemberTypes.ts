@@ -6,3 +6,7 @@ export interface Member {
   business_unit: string
   is_user: boolean
 }
+
+export interface MembersFCProps {
+  members: Member[]
+}
