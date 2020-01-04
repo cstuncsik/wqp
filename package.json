@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -15,6 +16,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "husky": "^3.1.0",
+    "json-server": "^0.15.1",
     "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
@@ -23,6 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:mock-api": "json-server -w mock-api/db.json -r mock-api/routes.json -p 4000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -53,5 +56,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "proxy": "http://localhost:4000"
 }
