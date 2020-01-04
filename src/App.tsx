@@ -1,19 +1,24 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.scss'
+import React, { FC, useEffect, useState } from 'react'
 
-const App: React.FC = () => {
+import { Header } from 'components/Header/Header'
+import { Member } from 'components/Members/MemberTypes'
+import { Members } from './components/Members/Members'
+import { getMe } from 'components/Members/MemberServices'
+import 'App.scss'
+
+const App: FC = () => {
+  const [me, setMe] = useState<Member | null>(null)
+
+  useEffect(() => {
+    getMe().then(({ data }) => {
+      setMe(data)
+    })
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+      <Header me={me} />
+      <Members />
     </div>
   )
 }
