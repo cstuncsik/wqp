@@ -41,3 +41,5 @@ export interface MemberRowFCProps {
   roles: Dictionary<MemberRole>
   accessLevels: Dictionary<MemberAccessLevel>
 }
+
+export type MemberResult = Partial<MemberWithRole>

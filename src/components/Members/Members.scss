@@ -1,5 +1,7 @@
 .Members {
   display: grid;
+  grid-template-rows: 1fr auto;
+  grid-row-gap: 10px;
 }
 
 .Members-data {
@@ -9,4 +11,11 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   align-items: center;
+}
+
+.Members-result {
+  padding: 10px;
+  pre {
+    color: #fff;
+  }
 }
