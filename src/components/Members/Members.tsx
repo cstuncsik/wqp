@@ -129,7 +129,7 @@ export const Members: FC<MembersFCProps> = ({ members }) => {
             <button type="button" onClick={createMembersResult}>
               Save result
             </button>
-            {membersResult.members.length > 0 && <pre>{JSON.stringify(membersResult, null, 2)}</pre>}
+            <pre>{JSON.stringify(membersResult, null, 2)}</pre>
           </div>
         </Fragment>
       ) : (

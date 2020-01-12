@@ -1,6 +1,9 @@
 .App {
+  position: relative;
   display: grid;
   grid-template-rows: 15% auto;
   height: 100vh;
   background-color: #282c34;
+  grid-template-areas: 'Header New-member' 'Members Members';
+  color: #ccc;
 }

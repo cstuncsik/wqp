@@ -5,6 +5,7 @@ import { Member } from 'components/Members/MemberTypes'
 import { Members } from './components/Members/Members'
 import { getMe, getMembers } from 'components/Members/MemberServices'
 import { ErrorContext } from 'components/Error/Error'
+import { NewMember } from 'components/Members/NewMember'
 
 import 'App.scss'
 
@@ -33,6 +34,7 @@ export const App: FC = () => {
   return (
     <div className="App">
       <Header me={me} />
+      <NewMember />
       <Members members={members} />
     </div>
   )

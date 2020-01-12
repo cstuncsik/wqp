@@ -1,0 +1,58 @@
+.New-member {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: New-member;
+}
+
+.New-member-overlay {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+
+  &__opened {
+    display: flex;
+  }
+}
+
+.New-member-content {
+  background-color: #282c34;
+  border: 2px solid #ccc;
+  padding: 20px;
+}
+
+.New-member-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.New-member-content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.New-member-content-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.New-member-content-form-input {
+  input[type='text'] {
+    display: block;
+    width: 100%;
+  }
+
+  small {
+    display: block;
+  }
+}
