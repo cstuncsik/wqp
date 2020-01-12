@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom'
 
 import * as serviceWorker from 'serviceWorker'
 import { App } from 'App'
-import { ErrorMessagesProvider } from 'components/Error/Error'
+import { AppProvider } from 'AppContext'
 
 import 'index.scss'
 
 ReactDOM.render(
-  <ErrorMessagesProvider>
+  <AppProvider>
     <App />
-  </ErrorMessagesProvider>,
+  </AppProvider>,
   document.getElementById('root')
 )
 

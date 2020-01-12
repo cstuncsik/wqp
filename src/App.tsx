@@ -4,15 +4,16 @@ import { Header } from 'components/Header/Header'
 import { Member } from 'components/Members/MemberTypes'
 import { Members } from './components/Members/Members'
 import { getMe, getMembers } from 'components/Members/MemberServices'
-import { ErrorContext } from 'components/Error/Error'
+import { AppContext } from 'AppContext'
 import { NewMember } from 'components/Members/NewMember'
 
 import 'App.scss'
+import 'components/Message/Message.scss'
 
 export const App: FC = () => {
   const [me, setMe] = useState<Member | null>(null)
   const [members, setMembers] = useState<Member[]>([])
-  const { addErrorMessage } = useContext(ErrorContext)
+  const { addMessage } = useContext(AppContext)
 
   useEffect(() => {
     getMe()
@@ -20,14 +21,14 @@ export const App: FC = () => {
         setMe(data)
       })
       .catch(error => {
-        addErrorMessage('Loading logged in user data failed')
+        addMessage({ type: 'error', text: 'Loading logged in user data failed' })
       })
     getMembers()
       .then(({ data }) => {
         setMembers(data)
       })
       .catch(error => {
-        addErrorMessage('Loading members data failed')
+        addMessage({ type: 'error', text: 'Loading members data failed' })
       })
   }, [])
 
