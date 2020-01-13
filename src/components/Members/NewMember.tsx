@@ -1,8 +1,9 @@
-import React, { FC, useState, ChangeEvent } from 'react'
+import React, { FC, useState, ChangeEvent, useContext } from 'react'
 
 import { Member } from 'components/Members/MemberTypes'
 import 'components/Members/NewMember.scss'
 import { uuidv4 } from 'helpers/string'
+import { AppContext } from 'AppContext'
 
 const createEmptyMember = (): Member => ({
   firstname: '',
@@ -16,6 +17,7 @@ const createEmptyMember = (): Member => ({
 export const NewMember: FC = () => {
   const [opened, setOpened] = useState<boolean>(false)
   const [newMember, setNewMember] = useState<Member>(createEmptyMember)
+  const { availableMembers, setAvailableMembers } = useContext(AppContext)
 
   const openOverlay = (): void => {
     setOpened(true)
@@ -31,7 +33,8 @@ export const NewMember: FC = () => {
   }
 
   const createNewMember = () => {
-    setNewMember({ ...newMember, person_id: uuidv4() })
+    setAvailableMembers([...availableMembers, { ...newMember, person_id: uuidv4() }])
+    closeOverlay()
   }
 
   return (
