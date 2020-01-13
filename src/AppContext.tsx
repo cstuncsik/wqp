@@ -3,11 +3,14 @@ import React, { FC, Fragment, createContext, useState } from 'react'
 import { AppContextProps } from 'AppTypes'
 import { MessageItem } from 'components/Message/MessageItem'
 import { Message } from 'components/Message/MessageTypes'
-import { uuidv4 } from './helpers/string'
+import { Member } from 'components/Members/MemberTypes'
+import { uuidv4 } from 'helpers/string'
 
 const defaultAppContextValue: AppContextProps = {
   messages: [],
-  addMessage: message => {}
+  addMessage: message => {},
+  availableMembers: [],
+  setAvailableMembers: availableMembers => {}
 }
 
 const AppContext = createContext(defaultAppContextValue)
@@ -15,6 +18,7 @@ const { Provider } = AppContext
 
 const AppProvider: FC = ({ children }) => {
   const [messages, setMessages] = useState<Message[]>([])
+  const [availableMembers, setAvailableMembers] = useState<Member[]>([])
 
   const addMessage = (message: Omit<Message, 'id'>): void => {
     setMessages([...messages, { ...message, id: uuidv4() }])
@@ -27,7 +31,9 @@ const AppProvider: FC = ({ children }) => {
     <Provider
       value={{
         messages,
-        addMessage
+        addMessage,
+        availableMembers,
+        setAvailableMembers
       }}
     >
       <Fragment>

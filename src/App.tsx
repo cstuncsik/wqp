@@ -12,8 +12,7 @@ import 'components/Message/Message.scss'
 
 export const App: FC = () => {
   const [me, setMe] = useState<Member | null>(null)
-  const [members, setMembers] = useState<Member[]>([])
-  const { addMessage } = useContext(AppContext)
+  const { addMessage, availableMembers, setAvailableMembers } = useContext(AppContext)
 
   useEffect(() => {
     getMe()
@@ -25,7 +24,7 @@ export const App: FC = () => {
       })
     getMembers()
       .then(({ data }) => {
-        setMembers(data)
+        setAvailableMembers(data)
       })
       .catch(error => {
         addMessage({ type: 'error', text: 'Loading members data failed' })
@@ -36,7 +35,7 @@ export const App: FC = () => {
     <div className="App">
       <Header me={me} />
       <NewMember />
-      <Members members={members} />
+      {availableMembers.length > 0 && <Members />}
     </div>
   )
 }

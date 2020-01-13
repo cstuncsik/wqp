@@ -9,10 +9,6 @@ export interface Member {
   is_user: boolean
 }
 
-export interface MembersFCProps {
-  members: Member[]
-}
-
 export interface MemberAccessLevel {
   id: 'read' | 'write' | 'admin'
   label: string
