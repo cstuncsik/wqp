@@ -36,24 +36,22 @@ const AppProvider: FC = ({ children }) => {
         setAvailableMembers
       }}
     >
-      <Fragment>
-        {messages.length > 0 && (
-          <ul className="App-messages">
-            {messages.map(message => (
-              <MessageItem
-                key={message.id}
-                {...{
-                  message,
-                  onClose: () => {
-                    removeMessage(message)
-                  }
-                }}
-              />
-            ))}
-          </ul>
-        )}
-        {children}
-      </Fragment>
+      {messages.length > 0 && (
+        <div className="App-messages">
+          {messages.map(message => (
+            <MessageItem
+              key={message.id}
+              {...{
+                message,
+                onClose: () => {
+                  removeMessage(message)
+                }
+              }}
+            />
+          ))}
+        </div>
+      )}
+      {children}
     </Provider>
   )
 }

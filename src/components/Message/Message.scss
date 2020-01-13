@@ -1,3 +1,18 @@
 .Message-item {
+  display: inline-block;
+  padding: 20px;
+  margin: 20px 0 0;
   color: #ccc;
+
+  &__success {
+    background: #080;
+  }
+
+  &__error {
+    background: #c00;
+  }
+
+  button {
+    margin-left: 20px;
+  }
 }

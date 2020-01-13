@@ -13,7 +13,7 @@ export const MemberRow: FC<MemberRowFCProps> = ({
   accessLevels
 }) => {
   return (
-    <Fragment data-testid="member-row">
+    <Fragment>
       <select
         name="member"
         disabled={selectableMembers.length === 1}

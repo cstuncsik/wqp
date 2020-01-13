@@ -12,7 +12,7 @@ import 'components/Message/Message.scss'
 
 export const App: FC = () => {
   const [me, setMe] = useState<Member | null>(null)
-  const { addMessage, availableMembers, setAvailableMembers } = useContext(AppContext)
+  const { addMessage, setAvailableMembers } = useContext(AppContext)
 
   useEffect(() => {
     getMe()
@@ -35,7 +35,7 @@ export const App: FC = () => {
     <div className="App">
       <Header me={me} />
       <NewMember />
-      {availableMembers.length > 0 && <Members />}
+      <Members />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { FC, useState, ChangeEvent, useContext, useRef, useEffect, useCallback } from 'react'
+import React, { FC, useState, ChangeEvent, useContext, useCallback } from 'react'
 
 import { Member } from 'components/Members/MemberTypes'
 import 'components/Members/NewMember.scss'
@@ -17,7 +17,7 @@ const createEmptyMember = (): Member => ({
 export const NewMember: FC = () => {
   const [opened, setOpened] = useState<boolean>(false)
   const [newMember, setNewMember] = useState<Member>(createEmptyMember)
-  const { availableMembers, setAvailableMembers } = useContext(AppContext)
+  const { availableMembers, setAvailableMembers, addMessage } = useContext(AppContext)
 
   const openOverlay = (): void => {
     setOpened(true)
@@ -35,6 +35,7 @@ export const NewMember: FC = () => {
   const createNewMember = () => {
     setAvailableMembers([...availableMembers, { ...newMember, person_id: uuidv4() }])
     closeOverlay()
+    addMessage({ type: 'success', text: 'Succesfully created a new member' })
   }
 
   const firstnameInput = useCallback((input: HTMLInputElement) => {

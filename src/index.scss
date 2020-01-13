@@ -11,3 +11,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+button,
+select,
+input {
+  padding: 5px 10px;
+  box-sizing: border-box;
+}

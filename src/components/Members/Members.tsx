@@ -89,11 +89,7 @@ export const Members: FC = () => {
         <h2>Member</h2>
         <h2>Role</h2>
         <h2>Access Level</h2>
-        <span>
-          <button type="button" onClick={addMember} disabled={!availableMembers.length}>
-            Add new member
-          </button>
-        </span>
+        <div></div>
         {selectedMembers.map((selectedMember, idx) => {
           const selectableMembers: MemberWithRole[] = availableMembers.reduce(
             (additionalSelectableMembers, member) =>
@@ -118,6 +114,11 @@ export const Members: FC = () => {
             />
           )
         })}
+      </div>
+      <div className="Members-action">
+        <button type="button" onClick={addMember} disabled={!availableMembers.length}>
+          Add new member
+        </button>
       </div>
       <div className="Members-result">
         <button type="button" onClick={createMembersResult}>
