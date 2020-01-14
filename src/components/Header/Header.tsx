@@ -6,7 +6,7 @@ import 'components/Header/Header.scss'
 
 export const Header: FC<HeaderFCProps> = ({ me }) => {
   return (
-    <header className="Header" data-testid="header">
+    <header className="Header">
       {me ? (
         <h1>
           {me?.firstname} {me?.lastname}

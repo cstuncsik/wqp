@@ -84,12 +84,12 @@ export const Members: FC = () => {
   }
 
   return (
-    <div className="Members" data-testid="members">
+    <div className="Members">
       <div className="Members-data">
         <h2>Member</h2>
         <h2>Role</h2>
         <h2>Access Level</h2>
-        <div></div>
+        <div />
         {selectedMembers.map((selectedMember, idx) => {
           const selectableMembers: MemberWithRole[] = availableMembers.reduce(
             (additionalSelectableMembers, member) =>

@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewMember component renders only a button 1`] = `
+<div
+  class="New-member"
+>
+  <button
+    type="button"
+  >
+    New user
+  </button>
+</div>
+`;
+
+exports[`NewMember component renders only a button again after closing the form 1`] = `
+<div
+  class="New-member"
+>
+  <button
+    type="button"
+  >
+    New user
+  </button>
+</div>
+`;
+
+exports[`NewMember component renders the new member form after clicking the button 1`] = `
+<div
+  class="New-member"
+>
+  <button
+    type="button"
+  >
+    New user
+  </button>
+  <div
+    class="New-member-overlay"
+  >
+    <div
+      class="New-member-content"
+    >
+      <div
+        class="New-member-content-header"
+      >
+        <h2>
+          Create member
+        </h2>
+        <button
+          type="button"
+        >
+          X
+        </button>
+      </div>
+      <div
+        class="New-member-content-form"
+      >
+        <div
+          class="New-member-content-form-input"
+        >
+          <label
+            for="firstname"
+          >
+            First name
+          </label>
+          <input
+            id="firstname"
+            name="firstname"
+            tabindex="1"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="New-member-content-form-input"
+        >
+          <label
+            for="title"
+          >
+            Title
+          </label>
+          <input
+            id="title"
+            name="title"
+            tabindex="3"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="New-member-content-form-input"
+        >
+          <label
+            for="lastname"
+          >
+            Last name
+          </label>
+          <input
+            id="lastname"
+            name="lastname"
+            tabindex="2"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="New-member-content-form-input"
+        >
+          <label
+            for="business_unit"
+          >
+            Business unit
+          </label>
+          <input
+            id="business_unit"
+            name="business_unit"
+            tabindex="4"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="New-member-content-form-input"
+        >
+          <input
+            id="is_user"
+            name="is_user"
+            tabindex="5"
+            type="checkbox"
+          />
+          <label
+            for="is_user"
+          >
+            User status
+          </label>
+          <small>
+            Designates whether the person can login into application
+          </small>
+        </div>
+      </div>
+      <div
+        class="New-member-content-footer"
+      >
+        <button
+          type="button"
+        >
+          Cancel
+        </button>
+        <button
+          type="button"
+        >
+          Create member
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageItem component renders error message 1`] = `
+<div
+  class="Message-item Message-item__error"
+>
+  error message text
+  <button
+    type="button"
+  >
+    X
+  </button>
+</div>
+`;
+
+exports[`MessageItem component renders info message 1`] = `
+<div
+  class="Message-item Message-item__info"
+>
+  info message text
+  <button
+    type="button"
+  >
+    X
+  </button>
+</div>
+`;
+
+exports[`MessageItem component renders success message 1`] = `
+<div
+  class="Message-item Message-item__success"
+>
+  success message text
+  <button
+    type="button"
+  >
+    X
+  </button>
+</div>
+`;
+
+exports[`MessageItem component renders warning message 1`] = `
+<div
+  class="Message-item Message-item__warning"
+>
+  warning message text
+  <button
+    type="button"
+  >
+    X
+  </button>
+</div>
+`;

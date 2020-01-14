@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component shows a message if not given a user 1`] = `
+<header
+  class="Header"
+>
+  <h1>
+    No user data
+  </h1>
+</header>
+`;
+
+exports[`Header component shows user name if given a valid user 1`] = `
+<header
+  class="Header"
+>
+  <h1>
+    Csaba
+     
+    Tuncsik
+  </h1>
+</header>
+`;

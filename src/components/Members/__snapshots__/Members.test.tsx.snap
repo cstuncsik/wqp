@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Members component renders empty list and "Add new member" button disabled when there is no data 1`] = `
+<div
+  class="Members"
+>
+  <div
+    class="Members-data"
+  >
+    <h2>
+      Member
+    </h2>
+    <h2>
+      Role
+    </h2>
+    <h2>
+      Access Level
+    </h2>
+    <div />
+  </div>
+  <div
+    class="Members-action"
+  >
+    <button
+      disabled=""
+      type="button"
+    >
+      Add new member
+    </button>
+  </div>
+  <div
+    class="Members-result"
+  >
+    <button
+      type="button"
+    >
+      Save result
+    </button>
+    <pre>
+      {
+  "members": []
+}
+    </pre>
+  </div>
+</div>
+`;
+
+exports[`Members component renders empty list and "Add new member" button enabled when there is at least one member 1`] = `
+<div
+  class="Members"
+>
+  <div
+    class="Members-data"
+  >
+    <h2>
+      Member
+    </h2>
+    <h2>
+      Role
+    </h2>
+    <h2>
+      Access Level
+    </h2>
+    <div />
+  </div>
+  <div
+    class="Members-action"
+  >
+    <button
+      type="button"
+    >
+      Add new member
+    </button>
+  </div>
+  <div
+    class="Members-result"
+  >
+    <button
+      type="button"
+    >
+      Save result
+    </button>
+    <pre>
+      {
+  "members": []
+}
+    </pre>
+  </div>
+</div>
+`;
+
+exports[`Members component renders list after clicking "Add new member" button when there is at least one member 1`] = `
+<div
+  class="Members"
+>
+  <div
+    class="Members-data"
+  >
+    <h2>
+      Member
+    </h2>
+    <h2>
+      Role
+    </h2>
+    <h2>
+      Access Level
+    </h2>
+    <div />
+    <select
+      disabled=""
+      name="member"
+    >
+      <option
+        value="1b31592d-3d8a-42ff-9a8a-a373b10c2ade"
+      >
+        Csaba Tuncsik
+      </option>
+    </select>
+    <select
+      name="role"
+    >
+      <option
+        value="customer"
+      >
+        Customer
+      </option>
+      <option
+        value="employee"
+      >
+        Employee
+      </option>
+      <option
+        value="manager"
+      >
+        Manager
+      </option>
+    </select>
+    <select
+      name="accessLevel"
+    >
+      <option
+        value="read"
+      >
+        Read
+      </option>
+      <option
+        value="write"
+      >
+        Write
+      </option>
+    </select>
+    <div>
+      <button
+        type="button"
+      >
+        X
+      </button>
+    </div>
+  </div>
+  <div
+    class="Members-action"
+  >
+    <button
+      disabled=""
+      type="button"
+    >
+      Add new member
+    </button>
+  </div>
+  <div
+    class="Members-result"
+  >
+    <button
+      type="button"
+    >
+      Save result
+    </button>
+    <pre>
+      {
+  "members": []
+}
+    </pre>
+  </div>
+</div>
+`;
