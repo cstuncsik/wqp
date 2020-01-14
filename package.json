@@ -61,7 +61,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn test --ci"
+      "pre-push": "yarn test --watchAll=false"
     }
   },
   "proxy": "http://localhost:4000"
