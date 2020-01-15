@@ -28,6 +28,11 @@ Uses *mock-api/db.json* to provide mock data
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `yarn test:e2e`
+
+Launches e2e tests with nightwatch <br />
+**Note: dev server must be started before**
+
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br />

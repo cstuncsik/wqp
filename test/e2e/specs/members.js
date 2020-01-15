@@ -1,0 +1,23 @@
+describe('Member', () => {
+  it('create user and add user', browser => {
+    browser
+      .url(browser.launch_url)
+      .waitForElementVisible('.New-member > button')
+      .click('.New-member > button')
+      .waitForElementVisible('.New-member-overlay')
+      .setValue('#firstname', 'Csaba')
+      .setValue('#lastname', 'Tuncsik')
+      .setValue('#title', 'Frontend developer')
+      .setValue('#business_unit', 'Product')
+      .click('#is_user')
+      .click('.New-member-content-footer button:last-child')
+      .waitForElementNotPresent('.New-member-overlay')
+      .waitForElementVisible('.Message-item.Message-item__success')
+      .click('.Message-item.Message-item__success button')
+      .waitForElementNotPresent('.Message-item.Message-item__success')
+      .waitForElementVisible('.Members-action > button')
+      .click('.Members-action > button')
+      .waitForElementVisible('.Members-data select')
+      .end()
+  })
+})
